@@ -1562,7 +1562,7 @@ Esitys on päättynyt. Voit sulkea tämän välilehden.
 
   &lt;div class=&quot;result-btn-area&quot;&gt;
     [[Tutustu tulevaisuuden teknologioihin!-&gt;Ammattivideot]]
-    &lt;button class=&quot;exit-btn&quot; onclick=&quot;window.confirmExit()&quot;&gt;Poistu pelistä&lt;/button&gt;
+    &lt;button class=&quot;exit-btn&quot; onclick=&quot;window.confirmExit()&quot;&gt;Poistu&lt;/button&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="38" name="Ammattivideot" tags="" position="750,950" size="100,100">&lt;&lt;if $videoIndex is undefined&gt;&gt;
@@ -1946,9 +1946,9 @@ Esitys on päättynyt. Voit sulkea tämän välilehden.
   &lt;/div&gt;
 
     &lt;div class=&quot;intro-nappi&quot;&gt;
-    [[Aloita ammattitesti-&gt;intro-sivu]]
-    [[Tutustu tulevaisuuden teknologioihin-&gt;Ammattivideot]]
-    [[Siirry suoraan Opintopolku.fi-&gt;Opintopolku-linkki]]
+    [[Seuraava sivu-&gt;intro-sivu]]
+   
+   
   &lt;/div&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="41" name="Tekniikan alan valintasivu" tags="" position="900,1075" size="100,100">&lt;div class=&quot;intro-sivu&quot;&gt;
@@ -1986,8 +1986,12 @@ Lopuksi saat automaattisen yhteenvedon vastauksistasi, jonka voit kopioida omaan
 
   &lt;div class=&quot;intro-nappi&quot;&gt;
  	[[Tehtävälomake-&gt;Ammattitutkimus: lomake]]
+
     [[Tekniikan alan oppilaitokset-&gt;Koulutus]]
-    [[Tulevaisuuden teknologiat-&gt;Ammattivideot]]
+    
+    [[Tekniikan alan ammatit-&gt;Ammattivideot]]
+  
+ 
 
   &lt;/div&gt;
 &lt;/div&gt;
@@ -2033,12 +2037,14 @@ Lopuksi saat automaattisen yhteenvedon vastauksistasi, jonka voit kopioida omaan
   &lt;p&gt;
     Tässä tehtävässä tutustut itse valitsemaasi tekniikan alan ammattiin. Vastaa kohtiin mahdollisimman konkreettisesti. Lopuksi saat vastauksistasi yhteenvedon, jonka voit kopioida omaan Google Drive -dokumenttiin tai ladata tekstitiedostona.
   &lt;/p&gt;
+  
 
   &lt;!-- 1. Ammatti --&gt;
   &lt;div class=&quot;lomake-ryhma&quot;&gt;
-    &lt;label class=&quot;lomake-label&quot;&gt;1. Ammatin nimi&lt;/label&gt;
+    &lt;h3&gt;1. Mikä tekniikan alan ammatti kiinnostaa sinua?&lt;/h3&gt;
     &lt;p class=&quot;lomake-ohje&quot;&gt;
-      Mihin tekniikan alan ammattiin tutustut tarkemmin?
+Minkä ammatin valitsisit, jos voisit suunnitella oman tulevaisuutesi?
+Miksi juuri tämä ammatti tuntuu kiinnostavalta?
     &lt;/p&gt;
     &lt;&lt;set $ammattiNimi to $ammattiNimi or &quot;&quot;&gt;&gt;
  &lt;&lt;textbox &quot;$ammattiNimi&quot; &quot;&quot;&gt;&gt;
@@ -2047,27 +2053,22 @@ Lopuksi saat automaattisen yhteenvedon vastauksistasi, jonka voit kopioida omaan
 
   &lt;!-- 2. Koulutuspolku --&gt;
   &lt;div class=&quot;lomake-ryhma&quot;&gt;
-    &lt;label class=&quot;lomake-label&quot;&gt;2. Koulutuspolku ammattiin&lt;/label&gt;
+    &lt;h3&gt;2. Mikä koulutus ja oppilaitos johtaa tähän ammattiin?&lt;/h3&gt;
     &lt;p class=&quot;lomake-ohje&quot;&gt;
-      Kuvaile, millaisia koulutuspolkuja tähän ammattiin voi johtaa (esim. peruskoulu → ammatillinen koulutus → työelämä → AMK / tai peruskoulu → lukio → AMK / yliopisto).
+Missä tätä alaa voi opiskella (ammatillinen koulutus, lukio + jatkokoulutus, ammattikorkeakoulu, yliopisto, kurssit)?
+Millaista osaamista tai sertifikaatteja ammatissa tarvitaan (esim. sähköpätevyydet, CNC-osaaminen, IT-taidot, turvallisuuskortit)?
+Millaisia opintoja tai taitoja tämä ammatti edellyttää?
     &lt;/p&gt;
     &lt;&lt;set $koulutusPolku to $koulutusPolku or &quot;&quot;&gt;&gt;
 	&lt;&lt;textarea &quot;$koulutusPolku&quot; &quot;&quot;&gt;&gt;
 
   &lt;!-- 3. Työtehtävät --&gt;
   &lt;div class=&quot;lomake-ryhma&quot;&gt;
-    &lt;label class=&quot;lomake-label&quot;&gt;3. Mitä työtehtäviä ammatissa tehdään?&lt;/label&gt;
+    &lt;h3&gt;3. Miltä tämän ammatin työtehtävät ja työpäivät tuntuisivat?&lt;/h3&gt;
     &lt;p class=&quot;lomake-ohje&quot;&gt;
-      Kerro esimerkkejä työtehtävistä ja työn sisällöstä.  Voit hyödyntää esim. Työmarkkinatoria ja Duunitoria.
-
-    &lt;a href=&quot;https://tyomarkkinatori.fi/henkiloasiakkaat/ammattitieto&quot; target=&quot;_blank&quot;&gt;
-  Työmarkkinatorin ammattitieto
-	&lt;/a&gt; 
-  &lt;a href=&quot;https://duunitori.fi/tyopaikat/selaa&quot; target=&quot;_blank&quot;&gt;
-  Duunitori
-&lt;/a&gt;
-
-
+Mitä tekisit työssä konkreettisesti (esim. koneiden käyttöä, teknisiä mittauksia, laiteasennuksia, ohjelmointia, huoltoa, suunnittelua)?
+Olisiko työ pääasiassa päivätyötä, vuorotyötä, kenttätyötä tai liikkuvaa työtä?
+Millainen työrytmi sopisi sinulle ja miksi?
 
     &lt;/p&gt;
     &lt;&lt;set $tyotehtavat to $tyotehtavat or &quot;&quot;&gt;&gt;
@@ -2076,19 +2077,29 @@ Lopuksi saat automaattisen yhteenvedon vastauksistasi, jonka voit kopioida omaan
 
   &lt;!-- 4. Työpaikat --&gt;
   &lt;div class=&quot;lomake-ryhma&quot;&gt;
-    &lt;label class=&quot;lomake-label&quot;&gt;4. Missä työpaikoissa voi työskennellä?&lt;/label&gt;
+    &lt;h3&gt;4. Missä paikoissa tai yrityksissä tätä työtä voi tehdä?&lt;/h3&gt;
     &lt;p class=&quot;lomake-ohje&quot;&gt;
-      Millaisissa yrityksissä tai organisaatioissa tätä työtä tehdään? Kirjoita esimerkkejä (myös yritysten nimiä, jos löydät).
+Tehdas, konepaja, korjaamo, huoltoyhtiö, IT-palveluyritys, rakennustyömaa, laboratorio, data center, suunnittelutoimisto, teollisuuslaitos…?
+Millainen työympäristö olisi (sisätila, ulkotyö, meluisa tuotantoympäristö, toimisto, tekninen laboratorio)?
+Minkälaisessa ympäristössä viihtyisit itse parhaiten?
     &lt;/p&gt;
     &lt;&lt;set $tyopaikat to $tyopaikat or &quot;&quot;&gt;&gt;
     &lt;&lt;textarea &quot;$tyopaikat&quot; &quot;&quot;&gt;&gt;
   &lt;/div&gt;
+   &lt;a href=&quot;https://tyomarkkinatori.fi/henkiloasiakkaat/ammattitieto&quot; target=&quot;_blank&quot;&gt;
+  Työmarkkinatorin ammattitieto
+	&lt;/a&gt; 
+  &lt;a href=&quot;https://duunitori.fi/tyopaikat/selaa&quot; target=&quot;_blank&quot;&gt;
+  Duunitori
+&lt;/a&gt;
 
   &lt;!-- 5. Vahvuudet --&gt;
   &lt;div class=&quot;lomake-ryhma&quot;&gt;
-    &lt;label class=&quot;lomake-label&quot;&gt;5. Mitä vahvuuksia ammatissa tarvitaan?&lt;/label&gt;
+    &lt;h3&gt;5. Mitkä omat taidot ja ominaisuudet sopivat tähän ammattiin?&lt;/h3&gt;
     &lt;p class=&quot;lomake-ohje&quot;&gt;
-      Listaa ominaisuuksia, joita ammatissa tarvitaan (esim. huolellisuus, looginen ajattelu, käden taidot, tiimityö, asiakaspalvelu, kielitaito...).
+Tarvitaanko tarkkuutta, ongelmanratkaisua, kädentaitoja, loogista ajattelua, asiakaspalvelua, digiosaamista, tiimityötaitoja, turvallisuusajattelua?
+Mikä voisi olla sinulle työssä helppoa tai luontevaa?
+Missä asioissa sinulla olisi jo valmiiksi vahvuuksia?
     &lt;/p&gt;
     &lt;&lt;set $vahvuudet to $vahvuudet or &quot;&quot;&gt;&gt;
     &lt;&lt;textarea &quot;$vahvuudet&quot; &quot;&quot;&gt;&gt;
@@ -2096,42 +2107,58 @@ Lopuksi saat automaattisen yhteenvedon vastauksistasi, jonka voit kopioida omaan
 
   &lt;!-- 6. Hyvät puolet --&gt;
   &lt;div class=&quot;lomake-ryhma&quot;&gt;
-    &lt;label class=&quot;lomake-label&quot;&gt;6. Ammatin hyvät puolet&lt;/label&gt;
+    &lt;h3&gt;6. Mitkä asiat tässä ammatissa voisivat olla hyviä tai mukavia?&lt;/h3&gt;
     &lt;p class=&quot;lomake-ohje&quot;&gt;
-      Mitkä ovat ammatin parhaat puolet?
+Onko työssä jotakin, mikä innostaa: uuden oppiminen, teknologian kehitys, itsenäisyys, monipuoliset projektit, näkyvät lopputulokset, hyvä työllisyys?
+Mitkä ammatin puolet sopisivat sinun elämäntilanteeseesi tai persoonallisuuteesi?
     &lt;/p&gt;
     &lt;&lt;set $hyvatPuolet to $hyvatPuolet or &quot;&quot;&gt;&gt;
     &lt;&lt;textarea &quot;$hyvatPuolet&quot; &quot;&quot;&gt;&gt;
   &lt;/div&gt;
 
-  &lt;!-- 6b. Haasteet --&gt;
+  &lt;!-- 7. Haasteet --&gt;
   &lt;div class=&quot;lomake-ryhma&quot;&gt;
-    &lt;label class=&quot;lomake-label&quot;&gt;6b. Ammatin haasteet&lt;/label&gt;
+    &lt;h3&gt;7. Mitkä asiat voisivat olla haastavia tai vaikeita?&lt;/h3&gt;
     &lt;p class=&quot;lomake-ohje&quot;&gt;
-      Mitkä asiat voivat olla haastavia tai vaativia tässä työssä?
+Voisiko ammatissa olla kiirettä, fyysistä kuormitusta, tarkkuutta vaativia tehtäviä, turvallisuusvastuuta, teknisiä ongelmia tai vuorotyötä?
+Sopisivatko nämä haasteet sinulle vai aiheuttaisivatko ne huolta?
     &lt;/p&gt;
     &lt;&lt;set $haasteet to $haasteet or &quot;&quot;&gt;&gt;
 	&lt;&lt;textarea &quot;$haasteet&quot; &quot;&quot;&gt;&gt;
   &lt;/div&gt;
 
-  &lt;!-- 7. Palkkaus --&gt;
+  &lt;!-- 8. Palkkaus --&gt;
   &lt;div class=&quot;lomake-ryhma&quot;&gt;
-    &lt;label class=&quot;lomake-label&quot;&gt;7. Palkkaus&lt;/label&gt;
+    &lt;label class=&quot;lomake-label&quot;&gt;8. Miltä palkkaus ja taloudellinen puoli vaikuttavat?&lt;/label&gt;
     &lt;p class=&quot;lomake-ohje&quot;&gt;
-      Selvitä mahdollisuuksien mukaan ammatin palkkatasoa (esim. aloituspalkka, keskipalkka, lisät). Jos et löydä tarkkoja lukuja, voit kirjoittaa lyhyen kuvauksen.
+ Minkä suuruista aloituspalkkaa tai tuntipalkkaa ammatissa yleensä maksetaan?
+Riittäisikö palkka omaan elämäntilanteeseesi (esim. asuminen, harrastukset, säästäminen)?
+Onko alalla mahdollisuuksia palkkakehitykseen, lisäkorvauksiin tai etenemiseen?
     &lt;/p&gt;
     &lt;&lt;set $palkkaus to $palkkaus or &quot;&quot;&gt;&gt;
   	&lt;&lt;textarea &quot;$palkkaus&quot; &quot;&quot;&gt;&gt;
   &lt;/div&gt;
-
-  &lt;!-- 8. Oma yhteenveto --&gt;
+  
+  &lt;!-- 9. Harjoittelu --&gt;
   &lt;div class=&quot;lomake-ryhma&quot;&gt;
-    &lt;label class=&quot;lomake-label&quot;&gt;8. Oma yhteenvetosi&lt;/label&gt;
+    &lt;h3&gt;9. Miltä tuntuisi kokeilla harjoittelua tai työssäoppimista alalla?&lt;/h3&gt;
     &lt;p class=&quot;lomake-ohje&quot;&gt;
-      Kirjoita lyhyt yhteenveto (muutama lause), jossa kerrot, miksi tämä ammatti voisi sopia sinulle – tai miksi ei.
+Olisitko valmis oppimaan uutta, tekemään työtä vaihtelevissa ympäristöissä tai joustavissa työajoissa?Mitä luulet oppivasi, jos kokeilisit työtä käytännössä?
     &lt;/p&gt;
-    &lt;&lt;set $yhteenvetoOmaNakyma to $yhteenvetoOmaNakyma or &quot;&quot;&gt;&gt;
-	&lt;&lt;textarea &quot;$yhteenvetoOmaNakyma&quot; &quot;&quot;&gt;&gt;
+    &lt;&lt;set $harjoittelu to $harjoittelu or &quot;&quot;&gt;&gt;
+  	&lt;&lt;textarea &quot;$harjoittelu&quot; &quot;&quot;&gt;&gt;
+  &lt;/div&gt;
+
+  &lt;!-- 10. Oma yhteenveto --&gt;
+  &lt;div class=&quot;lomake-ryhma&quot;&gt;
+    &lt;h3&gt;10. Yhteenveto – sopisiko tämä työ sinulle?&lt;/h3&gt;
+    &lt;p class=&quot;lomake-ohje&quot;&gt;
+Miksi uskot, että tämä ammatti voisi sopia sinulle?
+Mitä mahdollisia huolia tai epävarmuuksia sinulla on?
+Mitä haluaisit vielä selvittää ennen kuin tekisit päätöksen koulutuksesta tai urasuunnasta?
+    &lt;/p&gt;
+    &lt;&lt;set $yhteenveto to $yhteenveto or &quot;&quot;&gt;&gt;
+	&lt;&lt;textarea &quot;$yhteenveto&quot; &quot;&quot;&gt;&gt;
   &lt;/div&gt;
 
   &lt;div class=&quot;intro-nappi&quot; style=&quot;margin-top:1.5rem;&quot;&gt;
@@ -2191,10 +2218,15 @@ Lopuksi saat automaattisen yhteenvedon vastauksistasi, jonka voit kopioida omaan
   &lt;p&gt;
     &lt;&lt;print $palkkaus&gt;&gt;
   &lt;/p&gt;
-
-  &lt;h2&gt;Oma yhteenvetosi&lt;/h2&gt;
+  
+  &lt;h2&gt;Harjoittelu&lt;/h2&gt;
   &lt;p&gt;
-    &lt;&lt;print $yhteenvetoOmaNakyma&gt;&gt;
+    &lt;&lt;print $harjoittelu&gt;&gt;
+  &lt;/p&gt;
+
+  &lt;h2&gt;Oma yhteenveto&lt;/h2&gt;
+  &lt;p&gt;
+    &lt;&lt;print $yhteenveto&gt;&gt;
   &lt;/p&gt;
 
   &lt;hr&gt;
