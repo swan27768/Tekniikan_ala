@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Tekniikan ala" startnode="1" creator="Twine" creator-version="2.11.1" format="SugarCube" format-version="2.37.3" ifid="47896B9E-92DC-4599-BB73-E65CBAD63BAF" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* 1. POISTETAAN SUGARCUBEN OLETUSSIVUPALKKI JA TYÖKALURIVI */
+	<tw-storydata name="Tekniikan ala" startnode="46" creator="Twine" creator-version="2.11.1" format="SugarCube" format-version="2.37.3" ifid="47896B9E-92DC-4599-BB73-E65CBAD63BAF" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* 1. POISTETAAN SUGARCUBEN OLETUSSIVUPALKKI JA TYÖKALURIVI */
 
 #sidebar,
 #ui-bar,
@@ -739,6 +739,123 @@ textarea {
 textarea {
   min-height: 6rem;      /* voit säätää: esim. 6–10rem */
   resize: vertical;      /* käyttäjä voi venyttää alareunasta */
+}
+:root {
+  --brand-main: #26e3ff;   /* kirkas tekninen turkoosi / cyan */
+  --brand-dark: #020816;   /* hyvin tumma sininen tausta */
+  --bg-page:   #050b16;
+}
+/* ============================= */
+/* TEKNIIKAN ALAN KANSI          */
+/* ============================= */
+
+.cover-simple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 60vh;
+
+  /* tumma, tekninen tausta + “hehku” */
+  background:
+    radial-gradient(circle at 10% 20%, rgba(38, 227, 255, 0.18) 0, transparent 55%),
+    radial-gradient(circle at 85% 80%, rgba(0, 170, 255, 0.22) 0, transparent 55%),
+    linear-gradient(135deg, #050816 0%, #020b1c 50%, #050816 100%);
+
+  border-top: 6px solid var(--brand-main);
+  border-bottom: 6px solid var(--brand-main);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* hienovarainen “piirikaavio / verkko” -kuvio taustalle */
+.cover-simple::before {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  opacity: 0.23;
+  background-image:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(210deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* pysty “valoviiva”, tuo teknistä fiilistä */
+.cover-simple::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 120%;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%) rotate(5deg);
+  background: linear-gradient(
+    to bottom,
+    rgba(38, 227, 255, 0) 0%,
+    rgba(38, 227, 255, 0.85) 40%,
+    rgba(38, 227, 255, 0) 100%
+  );
+  opacity: 0.55;
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+.cover-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 34rem;
+}
+
+/* pääotsikko */
+.cover-simple h1 {
+  margin: 0 0 0.6rem;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 3.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+
+  background: linear-gradient(
+    120deg,
+    #e4faff 0%,
+    #7df5ff 35%,
+    #26e3ff 65%,
+    #9df5ff 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* alaotsikko esim. “Ammattitutkimus” */
+.cover-simple p {
+  margin: 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(228, 242, 255, 0.92);
+}
+
+/* että kansi-linkki näyttää klikkautuvalta mutta ei siniseltä peruslinkiltä */
+.cover-link-wrapper a,
+.cover-link-wrapper .link-internal {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.cover-simple:hover {
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.8);
+  transform: translateY(-1px);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">/* Kiinteä navigointipalkki nuolineen SugarCube 2:lle */
 
@@ -2271,6 +2388,11 @@ Mitä haluaisit vielä selvittää ennen kuin tekisit päätöksen koulutuksesta
     [[Sulje esitys-&gt;Poistu]]
   &lt;/div&gt;
 
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="46" name="Cover" tags="" position="500,100" size="100,100">
+&lt;div class=&quot;cover-link-wrapper&quot;&gt;
+	&lt;&lt;link &quot;&lt;div class=&#39;cover-simple&#39;&gt;&lt;div class=&#39;cover-inner&#39;&gt;&lt;h1&gt;Tekniikan ala&lt;/h1&gt;&lt;/div&gt;&lt;/div&gt;&quot; &quot;Start&quot;&gt;&gt;
+	&lt;&lt;/link&gt;&gt;
 &lt;/div&gt;
 </tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
