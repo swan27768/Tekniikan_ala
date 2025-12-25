@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Tekniikan ala" startnode="46" creator="Twine" creator-version="2.11.1" format="SugarCube" format-version="2.37.3" ifid="47896B9E-92DC-4599-BB73-E65CBAD63BAF" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">:root {
+	<tw-storydata name="Tekniikan ala" startnode="45" creator="Twine" creator-version="2.11.1" format="SugarCube" format-version="2.37.3" ifid="47896B9E-92DC-4599-BB73-E65CBAD63BAF" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">:root {
   --theme-main: #7af7d2;
   --theme-secondary: #4fd2ff;
   --theme-warn: #ffe066;
@@ -358,21 +358,16 @@ a.external-link:active,
 /* Videokehys */
 
 .video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 720px;
-  margin: 1.2rem auto !important;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 18px rgba(0,0,0,0.6);
+  max-width: 900px;
+  margin: 1em auto;
 }
 
-.video-wrapper iframe {
+.video-wrapper video {
   width: 100%;
-  height: 100%;
-  border: none;
+  height: auto;
+  display: block;
 }
+
 
 /* Videon / kortin kuvausteksti */
 
@@ -1066,20 +1061,12 @@ $(document).one(":storyready", function () {
   &lt;p&gt;
   Tekninen osaaminen on keskeinen osa kaikkia tekniikan alan ammatteja. Se edellyttää koneiden käyttötaitoa, suunnitelmallisuutta ja loogista ajattelua. Käden taidot ovat monissa työtehtävissä edelleen tärkeitä, ja samalla vahva tietotekninen osaaminen korostuu jatkuvasti muuttuvassa työympäristössä. Perinteisesti tekniikan taitojen hallinnan on nähty nojaavan vahvasti matematiikan osaamiseen, mutta nykyään myös hyvä kielitaito on merkittävä etu näillä aloilla.
 &lt;/p&gt;
-&lt;div class=&quot;video-wrapper&quot;&gt;
-  &lt;iframe
-    src=&quot;https://drive.google.com/file/d/1DFUvl2q7JHE8pFcMV--j1YO6nBHo1igE/preview&quot;
-    title=&quot;Tekniikan alat - video&quot;
-    frameborder=&quot;0&quot;
-    allow=&quot;autoplay&quot;
-    allowfullscreen&gt;
-  &lt;/iframe&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;video-source&quot;&gt;
-  Tämä video perustuu teokseen 
-  ”Tulevaisuus teknologia-alalla!” – Tussitaikurit Oy / Marker Wizards Ltd. 
-  (CC BY).  
-  &lt;/div&gt;
+
+&lt;p&gt;
+  &lt;a href=&quot;https://mytech.fi/tulevaisuuden_teknologiat/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+    Tulevaisuuden teknologiat – MyTech
+  &lt;/a&gt;
+&lt;/p&gt;
 
 
   &lt;div class=&quot;intro-nappi&quot;&gt;
@@ -1699,213 +1686,16 @@ Esitys on päättynyt. Voit sulkea tämän välilehden.
     &lt;div class=&quot;tulosblokki heikko&quot;&gt;
       &lt;h2&gt;Tekniikan ala ei ehkä tunnu omalta juuri nyt&lt;/h2&gt;
       &lt;p&gt;
-        Testin perusteella tekninen ala ei tällä hetkellä tunnu kaikkein luontevimmalta valinnalta. Tämä ei silti sulje mitään pois – voit kehittyä ajan myötä tai löytää jonkin toisen alan, joka tuntuu enemmän omalta.
+Testin perusteella tekninen ala ei tällä hetkellä tunnu kaikkein luontevimmalta valinnalta. Tämä ei silti sulje mitään pois – voit kehittyä ajan myötä tai löytää jonkin toisen alan, joka tuntuu enemmän omalta.
       &lt;/p&gt;
     &lt;/div&gt;
   &lt;&lt;/if&gt;&gt;
 
-  &lt;div class=&quot;result-btn-area&quot;&gt;
-    [[Tutustu tulevaisuuden teknologioihin!-&gt;Ammattivideot]]
-    &lt;button class=&quot;exit-btn&quot; onclick=&quot;window.confirmExit()&quot;&gt;Poistu&lt;/button&gt;
+ &lt;div class=&quot;intro-nappi&quot;&gt;
+    [[Ammatinvalintatehtävään-&gt;Tekniikan alan valintasivu]]
   &lt;/div&gt;
-&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="38" name="Ammattivideot" tags="" position="750,950" size="100,100">&lt;&lt;if $videoIndex is undefined&gt;&gt;
-  &lt;&lt;set $videoIndex = 1&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-&lt;div class=&quot;quiz-page&quot;&gt;
-  &lt;h1&gt;Kurkista tekniikan tulevaisuuteen!&lt;/h1&gt;
-  &lt;hr&gt;
-  &lt;div class=&quot;scroll-row&quot;&gt;
-  &lt;div class=&quot;scroll-content&quot;&gt;
-    • Avaruusteknologia • Bioteknologia • Energiateknologia • Kvanttiteknologia • Langattomat tietoverkot • Mikroelektroniikka ja fotoniikka • Tekoäly • Terveysteknologia • Turvallisuusteknologia 
   &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;
-    Tulevaisuus tarvitsee monipuolisia osaajia: käytännön tekijöitä, suunnittelijoita, ongelmanratkaisijoita ja tutkijoita. Videot auttavat sinua näkemään, millaisia mahdollisuuksia teknologia-alalla on – ja miten sinä voit olla mukana rakentamassa tulevaisuuden ratkaisuja.
-  &lt;/p&gt;
-  &lt;div class=&quot;media-card&quot;&gt;
-
-    &lt;&lt;switch $videoIndex&gt;&gt;
-
-      &lt;&lt;case 1&gt;&gt;
-        &lt;h2&gt;Tulevaisuuden ammattiosaaminen&lt;/h2&gt;
-        &lt;p class=&quot;video-desc&quot;&gt;
-        	Tulevaisuuden ammattiosaaminen yhdistää teknistä taitoa, ongelmanratkaisua, yhteistyötaitoja ja halua oppia uutta. Näiden  videoiden avulla voit pohtia, millainen teknologian ala voisi sopia juuri sinulle.
-        &lt;/p&gt;
-        &lt;div class=&quot;video-wrapper&quot;&gt;
-          &lt;iframe
-           src=&quot;https://drive.google.com/file/d/1HvfEol4BlAQ32Se7SIgj8S_CEb6MLEGp/preview&quot;
-            title=&quot;Tulevaisuuden ammattiosaaminen&quot;
-            allow=&quot;autoplay&quot;
-            allowfullscreen&gt;
-          &lt;/iframe&gt;
-        &lt;/div&gt;
-
-      &lt;&lt;case 2&gt;&gt;
-        &lt;h2&gt;Bioteknologia&lt;/h2&gt;
-        &lt;p class=&quot;video-desc&quot;&gt;
-          Bioteknologia yhdistää biologian ja tekniikan. Sitä käytetään esimerkiksi lääkkeiden kehittämisessä, elintarviketuotannossa ja ympäristöhaasteiden ratkaisemisessa.
-        &lt;/p&gt;
-        &lt;div class=&quot;video-wrapper&quot;&gt;
-          &lt;iframe
-            src=&quot;https://drive.google.com/file/d/1IcYpD6vnRqFsELLHssDY8cVcfrqRTbUB/preview&quot;
-            title=&quot;Bioteknologia&quot;
-            allow=&quot;autoplay&quot;
-            allowfullscreen&gt;
-          &lt;/iframe&gt;
-        &lt;/div&gt;
-
-      &lt;&lt;case 3&gt;&gt;
-        &lt;h2&gt;Energiateknologia&lt;/h2&gt;
-        &lt;p class=&quot;video-desc&quot;&gt;
-          Energiateknologia etsii ratkaisuja siihen, miten sähköä ja lämpöä tuotetaan mahdollisimman puhtaasti ja tehokkaasti. Uudet energiaratkaisut ovat avain kestävään tulevaisuuteen.
-        &lt;/p&gt;
-        &lt;div class=&quot;video-wrapper&quot;&gt;
-          &lt;iframe
-            src=&quot;https://drive.google.com/file/d/1H9XtVviYh04kAbLotTJGKPBJ0oWkayTJ/preview&quot;
-            title=&quot;Energiateknologia&quot;
-            allow=&quot;autoplay&quot;
-            allowfullscreen&gt;
-          &lt;/iframe&gt;
-        &lt;/div&gt;
-
-      &lt;&lt;case 4&gt;&gt;
-        &lt;h2&gt;Kvanttiteknologia&lt;/h2&gt;
-        &lt;p class=&quot;video-desc&quot;&gt;
-          Kvanttiteknologia hyödyntää luonnonilmiöitä, joita ei voi selittää tavallisella fysiikalla. Se voi mullistaa laskennan, tietoturvan ja mittausteknologian.
-        &lt;/p&gt;
-        &lt;div class=&quot;video-wrapper&quot;&gt;
-        &lt;iframe
-          src=&quot;https://drive.google.com/file/d/18fKk9BtVNsuVJmd8L-BUx5BxE4478hGa/preview&quot;
-          allow=&quot;autoplay; encrypted-media&quot;
-          allowfullscreen&gt;
-        &lt;/iframe&gt;
-      &lt;/div&gt;
-
-      &lt;&lt;case 5&gt;&gt;
-        &lt;h2&gt;Langattomat tietoverkot&lt;/h2&gt;
-        &lt;p class=&quot;video-desc&quot;&gt;
-          Langattomat verkot mahdollistavat sen, että laitteet, ihmiset ja palvelut ovat yhteydessä toisiinsa missä ja milloin tahansa – älypuhelimista teollisuuslaitoksiin.
-        &lt;/p&gt;
-        &lt;div class=&quot;video-wrapper&quot;&gt;
-        &lt;iframe
-          src=&quot;https://drive.google.com/file/d/1zR_BGULKS3zVDmRy2pqngrLFbdkdz8M2/preview&quot;
-          allow=&quot;autoplay; encrypted-media&quot;
-          allowfullscreen&gt;
-        &lt;/iframe&gt;
-      &lt;/div&gt;
-
-
-      &lt;&lt;case 6&gt;&gt;
-        &lt;h2&gt;Mikroelektroniikka ja fotoniikka&lt;/h2&gt;
-        &lt;p class=&quot;video-desc&quot;&gt;
-          Mikroelektroniikka ja fotoniikka liittyvät erittäin pieniin komponentteihin, piireihin ja valon hyödyntämiseen. Ne ovat kaiken modernin elektroniikan ja tietoliikenteen ytimessä.
-        &lt;/p&gt;
-        &lt;div class=&quot;video-wrapper&quot;&gt;
-        &lt;iframe
-          src=&quot;https://drive.google.com/file/d/1Ig-34dCRfg7LAjbpwn8KUA2kupZnWQXC/preview&quot;
-          allow=&quot;autoplay; encrypted-media&quot;
-          allowfullscreen&gt;
-        &lt;/iframe&gt;
-      &lt;/div&gt;
-
-
-      &lt;&lt;case 7&gt;&gt;
-        &lt;h2&gt;Tekoäly&lt;/h2&gt;
-        &lt;p class=&quot;video-desc&quot;&gt;
-          Tekoäly auttaa koneita oppimaan, tekemään päätöksiä ja tunnistamaan esimerkiksi kuvia ja puhetta. Sitä käytetään jo nyt monilla eri aloilla terveydenhuollosta teollisuuteen.
-        &lt;/p&gt;
-        &lt;div class=&quot;video-wrapper&quot;&gt;
-          &lt;iframe
-            src=&quot;https://drive.google.com/file/d/1PsjJCxQPIJLdoEkY0tC00xCswwfFYsDK/preview&quot;
-            allow=&quot;autoplay; encrypted-media&quot;
-            allowfullscreen&gt;
-          &lt;/iframe&gt;
-		&lt;/div&gt;
-
-
-      &lt;&lt;case 8&gt;&gt;
-        &lt;h2&gt;Terveysteknologia&lt;/h2&gt;
-        &lt;p class=&quot;video-desc&quot;&gt;
-          Terveysteknologia kehittää laitteita, ohjelmistoja ja ratkaisuja, jotka tukevat terveyden seurantaa, tutkimusta ja hoitoa – esimerkiksi kuvantamislaitteet ja digitaaliset terveyspalvelut.
-        &lt;/p&gt;
-        &lt;div class=&quot;video-wrapper&quot;&gt;
-        &lt;iframe
-          src=&quot;https://drive.google.com/file/d/10nxUi0zFAWiEIFPYujmZQntJDmgmAFtz/preview&quot;
-          allow=&quot;autoplay; encrypted-media&quot;
-          allowfullscreen&gt;
-        &lt;/iframe&gt;
-      &lt;/div&gt;
-
-
-      &lt;&lt;case 9&gt;&gt;
-        &lt;h2&gt;Turvallisuusteknologia&lt;/h2&gt;
-        &lt;p class=&quot;video-desc&quot;&gt;
-          Turvallisuusteknologia auttaa suojaamaan ihmisiä, tietoja ja järjestelmiä. Se liittyy esimerkiksi kyberturvallisuuteen, valvontajärjestelmiin ja kriittisen infrastruktuurin suojeluun.
-        &lt;/p&gt;
-        &lt;div class=&quot;video-wrapper&quot;&gt;
-        &lt;iframe
-          src=&quot;https://drive.google.com/file/d/1CscGqEMCBwWh9E7jQVqdXD5DkUJYGg1F/preview&quot;
-          allow=&quot;autoplay; encrypted-media&quot;
-          allowfullscreen&gt;
-        &lt;/iframe&gt;
-      &lt;/div&gt;
-
-
-      &lt;&lt;case 10&gt;&gt;
-        &lt;h2&gt;Uudet materiaalit&lt;/h2&gt;
-        &lt;p class=&quot;video-desc&quot;&gt;
-          Uudet materiaalit, kuten kevyet ja erittäin kestävät rakenteet, biopohjaiset materiaalit ja älymateriaalit, mahdollistavat energiatehokkaita ja ympäristöystävällisiä ratkaisuja.
-        &lt;/p&gt;
-       &lt;div class=&quot;video-wrapper&quot;&gt;
-        &lt;iframe
-          src=&quot;https://drive.google.com/file/d/1sm6JYkf0UgxThw6CZZVpvDr_rani8boK/preview&quot;
-          allow=&quot;autoplay; encrypted-media&quot;
-          allowfullscreen&gt;
-        &lt;/iframe&gt;
-      &lt;/div&gt;
-
-
-      &lt;&lt;case 11&gt;&gt;
-        &lt;h2&gt;Valmistusteknologia&lt;/h2&gt;
-        &lt;p class=&quot;video-desc&quot;&gt;
-          Valmistusteknologia kehittää tapoja, joilla tuotteet suunnitellaan ja tuotetaan. Siihen kuuluvat esimerkiksi automaatio, robotiikka ja 3D-tulostus.
-        &lt;/p&gt;
-        &lt;div class=&quot;video-wrapper&quot;&gt;
-        &lt;iframe
-          src=&quot;https://drive.google.com/file/d/1LKECLbPU2hndEwyWL4P9U7K6i7r3IQB2/preview&quot;
-          allow=&quot;autoplay; encrypted-media&quot;
-          allowfullscreen&gt;
-        &lt;/iframe&gt;
-      &lt;/div&gt;
-
-
-      &lt;&lt;/switch&gt;&gt;
-
-    &lt;div class=&quot;carousel-controls&quot;&gt;
-      &lt;&lt;link &quot;← Edellinen video&quot;&gt;&gt;
-        &lt;&lt;set $videoIndex = ($videoIndex == 1) ? 12 : $videoIndex - 1&gt;&gt;
-        &lt;&lt;goto &quot;Ammattivideot&quot;&gt;&gt;
-      &lt;&lt;/link&gt;&gt;
-
-      &lt;&lt;link &quot;Seuraava video →&quot;&gt;&gt;
-        &lt;&lt;set $videoIndex = ($videoIndex == 12) ? 1 : $videoIndex + 1&gt;&gt;
-        &lt;&lt;goto &quot;Ammattivideot&quot;&gt;&gt;
-      &lt;&lt;/link&gt;&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;video-source-global&quot;&gt;
-      &lt;span class=&quot;source-icon&quot;&gt;ⓘ&lt;/span&gt;
-     MyTech - Mitä sinä haluat osata? - mytech.fi
-    &lt;/div&gt;
-
-    &lt;div class=&quot;result-btn-area&quot;&gt;
-      [[Miten pääsee alalle? -&gt;Koulutus]]
-    &lt;/div&gt;
-
-  &lt;/div&gt;
-&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="39" name="Koulutus" tags="" position="1025,925" size="100,100">&lt;div class=&quot;quiz-page&quot;&gt;
+</tw-passagedata><tw-passagedata pid="38" name="Koulutus" tags="" position="900,875" size="100,100">&lt;div class=&quot;quiz-page&quot;&gt;
   &lt;h1&gt;Tekniikan alan koulutukset&lt;/h1&gt;
   &lt;hr&gt;
   &lt;h2&gt;Tekniikan toisen asteen koulutukset&lt;/h2&gt;
@@ -2074,7 +1864,7 @@ Esitys on päättynyt. Voit sulkea tämän välilehden.
   
   &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="40" name="Start" tags="" position="625,100" size="100,100">&lt;&lt;script&gt;&gt;
+</tw-passagedata><tw-passagedata pid="39" name="Start" tags="" position="625,100" size="100,100">&lt;&lt;script&gt;&gt;
 $(&#39;body&#39;).removeClass(&#39;hide-navbar&#39;);
 &lt;&lt;/script&gt;&gt;
 
@@ -2097,9 +1887,9 @@ $(&#39;body&#39;).removeClass(&#39;hide-navbar&#39;);
     [[Seuraava sivu-&gt;intro-sivu]]
    
    
-  &lt;/div&gt;
+  
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="41" name="Tekniikan alan valintasivu" tags="" position="900,1075" size="100,100">&lt;div class=&quot;intro-sivu&quot;&gt;
+</tw-passagedata><tw-passagedata pid="40" name="Tekniikan alan valintasivu" tags="" position="900,1075" size="100,100">&lt;div class=&quot;intro-sivu&quot;&gt;
   &lt;h1&gt;Mikä ammatti voisi sopia sinulle?&lt;/h1&gt;
   &lt;hr&gt;
   &lt;!-- Hidas juokseva rivi teknologia-aiheista (valinnainen koriste) --&gt;
@@ -2128,14 +1918,14 @@ Lopuksi saat automaattisen yhteenvedon vastauksistasi, jonka voit kopioida omaan
 
     [[Tekniikan alan oppilaitokset-&gt;Koulutus]]
     
-    [[Tekniikan alan ammatit-&gt;Ammattivideot]]
+
   
  
 
   &lt;/div&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="42" name="Opintopolku-linkki" tags="" position="1100,1075" size="100,100">&lt;div class=&quot;quiz-page&quot;&gt;
+</tw-passagedata><tw-passagedata pid="41" name="Opintopolku-linkki" tags="" position="1100,1075" size="100,100">&lt;div class=&quot;quiz-page&quot;&gt;
   &lt;h1&gt;Opintopolku.fi &lt;/h1&gt;
   &lt;hr&gt;
 
@@ -2169,7 +1959,7 @@ Lopuksi saat automaattisen yhteenvedon vastauksistasi, jonka voit kopioida omaan
    [[Takaisin alkuun-&gt;Start]]
   &lt;/div&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="43" name="Ammattitutkimus: lomake" tags="" position="900,1200" size="100,100">&lt;div class=&quot;quiz-page&quot;&gt;
+</tw-passagedata><tw-passagedata pid="42" name="Ammattitutkimus: lomake" tags="" position="900,1200" size="100,100">&lt;div class=&quot;quiz-page&quot;&gt;
   &lt;h1&gt;Ammattitutkimus&lt;/h1&gt;
   &lt;hr&gt;
 
@@ -2304,7 +2094,7 @@ Mitä haluaisit vielä selvittää ennen kuin tekisit päätöksen koulutuksesta
     [[Näytä yhteenveto vastauksista-&gt;Ammattitutkimus: yhteenveto]]
   &lt;/div&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="44" name="Ammattitutkimus: yhteenveto" tags="" position="900,1325" size="100,100">&lt;div class=&quot;quiz-page&quot;&gt;
+</tw-passagedata><tw-passagedata pid="43" name="Ammattitutkimus: yhteenveto" tags="" position="900,1325" size="100,100">&lt;div class=&quot;quiz-page&quot;&gt;
   &lt;h1&gt;Ammattitutkimuksen yhteenveto&lt;/h1&gt;
   &lt;hr&gt;
 
@@ -2380,7 +2170,7 @@ Mitä haluaisit vielä selvittää ennen kuin tekisit päätöksen koulutuksesta
     [[Lopuksi-&gt;Loppu]]
   &lt;/div&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="45" name="Loppu" tags="" position="1100,1400" size="100,100">&lt;div class=&quot;quiz-page&quot;&gt;
+</tw-passagedata><tw-passagedata pid="44" name="Loppu" tags="" position="1100,1400" size="100,100">&lt;div class=&quot;quiz-page&quot;&gt;
 
   &lt;h1&gt;Hienoa työtä!&lt;/h1&gt;
   &lt;hr&gt;
@@ -2411,7 +2201,7 @@ Mitä haluaisit vielä selvittää ennen kuin tekisit päätöksen koulutuksesta
   &lt;/div&gt;
 
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="46" name="Kansisivu" tags="" position="500,100" size="100,100">&lt;&lt;script&gt;&gt;
+</tw-passagedata><tw-passagedata pid="45" name="Kansisivu" tags="" position="500,100" size="100,100">&lt;&lt;script&gt;&gt;
 $(&#39;body&#39;).addClass(&#39;hide-navbar&#39;);
 &lt;&lt;/script&gt;&gt;
 
