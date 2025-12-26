@@ -936,53 +936,51 @@ body.hide-navbar .navbar-fixed {
 (function () {
 
   function addExitButton() {
-    // Tarkista onko nappi jo tehty
-    if (document.getElementById("nav-exit")) {
-      return;
-    }
+    if (document.getElementById("nav-exit")) return;
 
     const nav = document.querySelector(".navbar-fixed");
     if (!nav) return;
 
-    // Luodaan nappi
     const exitBtn = document.createElement("button");
     exitBtn.id = "nav-exit";
     exitBtn.className = "nav-btn nav-exit-btn";
     exitBtn.textContent = "Poistu";
 
-    // Varmistuskysely
     exitBtn.addEventListener("click", function () {
-      const varmistus = confirm("Haluatko varmasti poistua esityksestä?");
-      if (varmistus) {
-        try {
-          window.close();
-        } catch (e) {
-          alert("Voit sulkea esityksen sulkemalla tämän välilehden.");
-        }
+      const ok = confirm("Haluatko varmasti poistua tehtävästä?");
+      if (!ok) return;
+
+      const EXIT_URL = "https://SINUUN_KOULUSIVU.fi";   // ← tähän koulun Google Sites etusivu
+
+      // jos ollaan iframe-upotuksessa (Google Sites)
+      if (window !== window.parent) {
+        window.parent.location.href = EXIT_URL;
+      } else {
+        window.location.href = EXIT_URL;
       }
     });
 
-    // Lisätään nappi oikeaan reunaan
     nav.appendChild(exitBtn);
   }
 
-  // Luodaan nappi aina passagen vaihtuessa
-  $(document).on(":passagestart", function () {
-    addExitButton();
-  });
+  $(document).on(":passagestart", addExitButton);
 
 })();
 
-window.confirmExit = function () {
-  const varmistus = confirm("Haluatko varmasti poistua esityksestä?");
-  if (varmistus) {
-    try {
-      window.close();
-    } catch (e) {
-      alert("Voit sulkea esityksen sulkemalla tämän välilehden.");
-    }
+
+window.confirmExitStory = function () {
+  const ok = confirm("Haluatko varmasti poistua tehtävästä?");
+  if (!ok) return;
+
+  // jos tarina on iframe:ssa (Google Sites)
+  if (window !== window.parent) {
+    window.parent.location.href = "https://sites.google.com/view/digiopo/esimerkkisivu-ammattialat";   // <-- koulun Google Sites etusivu
+  } else {
+    // jos tarina on omassa välilehdessä
+    window.location.href = "https://sites.google.com/view/digiopo/esimerkkisivu-ammattialat";
   }
 };
+
 window.downloadAmmattitutkimus = function () {
   const v = State.variables;
 
@@ -1169,12 +1167,17 @@ $(document).one(":storyready", function () {
 
 
 
-</tw-passagedata><tw-passagedata pid="7" name="Poistu" tags="" position="875,225" size="100,100">
-&lt;&lt;run Window.close()&gt;&gt;
+</tw-passagedata><tw-passagedata pid="7" name="Poistu" tags="" position="1100,1525" size="100,100">
 
-&lt;p style=&quot;text-align:center; margin-top: 2rem;&quot;&gt;
-Esitys on päättynyt. Voit sulkea tämän välilehden.
-&lt;/p&gt;
+&lt;&lt;script&gt;&gt;
+const EXIT_URL = &quot;https://sites.google.com/view/digiopo/esimerkkisivu-ammattialat&quot;;   // ← tähän se Google Sites -sivu
+
+if (window !== window.parent) {
+  window.parent.location.href = EXIT_URL;
+} else {
+  window.location.href = EXIT_URL;
+}
+&lt;&lt;/script&gt;&gt;
 </tw-passagedata><tw-passagedata pid="8" name="Väärin 2" tags="" position="425,750" size="100,100">&lt;div class=&quot;quiz-result wrong&quot;&gt;
   &lt;h2&gt;Ei aivan.&lt;/h2&gt;
   &lt;hr&gt;
@@ -2195,10 +2198,10 @@ Mitä haluaisit vielä selvittää ennen kuin tekisit päätöksen koulutuksesta
     Uskalla tavoitella, oppia ja unelmoida – tulevaisuus on enemmän auki kuin koskaan.
   &lt;/p&gt;
 
-  &lt;div class=&quot;intro-nappi&quot; style=&quot;margin-top:2rem;&quot;&gt;
-    [[Palaa tarinan alkuun-&gt;Start]]
-    [[Sulje-&gt;Poistu]]
-  &lt;/div&gt;
+ &lt;div class=&quot;intro-nappi&quot; style=&quot;margin-top:2rem;&quot;&gt;
+  [[Palaa tarinan alkuun-&gt;Start]]
+  [[Sulje-&gt;Poistu]]
+&lt;/div&gt;
 
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="45" name="Kansisivu" tags="" position="500,100" size="100,100">&lt;&lt;script&gt;&gt;
