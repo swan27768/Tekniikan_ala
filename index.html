@@ -726,6 +726,45 @@ tarea,
 }
 .quiz-popup h3 { color:#6fffe9; margin-top:0; }
 .quiz-popup p { color:#e6fbff; }
+/* ============================
+   SAAVUTETTAVUUS – LUETTAVUUS
+   ============================ */
+
+/* Perusteksti */
+#passages .passage p,
+#passages .passage li,
+#passages .passage div,
+#passages .passage span,
+#passages .passage section {
+  font-size: 18px !important;
+  line-height: 1.75 !important;
+}
+
+/* Otsikot */
+#passages .passage h1 {
+  font-size: 2.6rem !important;
+}
+
+#passages .passage h2 {
+  font-size: 1.9rem !important;
+}
+
+#passages .passage h3 {
+  font-size: 1.4rem !important;
+}
+
+/* Nappitekstit */
+#passages .passage a,
+#passages .passage button {
+  font-size: 1.05rem !important;
+}
+
+/* Lomakekentät */
+#passages textarea,
+#passages input,
+#passages select {
+  font-size: 1.05rem !important;
+}
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">/* ========= NAVBAR ========= */
 $(document).on(":passagestart", function (event) {
   if (!event || !event.passage) return;
